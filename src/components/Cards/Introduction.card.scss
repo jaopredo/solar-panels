@@ -1,0 +1,26 @@
+@use "../../scss/mixins.scss";
+@use "../../scss/colors.scss" as *;
+
+.introduction-card {
+    @include mixins.flex();
+
+    height: 170px;
+    width: 250px;
+
+    border: 5px solid $default-orange;
+    position: relative;
+    font-size: 1.1em;
+    word-break: break-word;
+
+    img {
+        position: absolute;
+        display: block;
+        padding: 10px;
+        background-color: white;
+        width: 68px;
+        
+        top: -33px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

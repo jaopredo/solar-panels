@@ -1,4 +1,6 @@
-import React from 'react';
+import React from 'react'
+
+import "./Introduction.area.scss"
 
 /* IMAGES */
 import Partnership from '../../images/partnership.jpg'
@@ -9,26 +11,26 @@ import Plants from '../../images/icon.orange.plants-icon.png'
 import Fan from '../../images/icon.orange.fan.png'
 
 /* COMPONENTS */
-import IntroCard from '../Cards/Introduction.card';
+import IntroCard from '../Cards/Introduction.card'
 
 function Introduction() {
     const IntroCardInfos = [
-        { image: SolarPanel, msg: "Inverter Inspection" },
-        { image: FanPanel, msg: "Complete Diagnostic" },
-        { image: Plants, msg: "Expert Solar Panel Repair" },
-        { image: Fan, msg: "Updates & Monitoring" },
+        { image: SolarPanel, msg: <>Inverter<br/>Inspection</> },
+        { image: FanPanel, msg: <>Complete<br/>Diagnostic</> },
+        { image: Plants, msg: <>Expert Solar Panel<br/>Repair</> },
+        { image: Fan, msg: <>Updates &<br/>Monitoring</> },
     ]
 
     return <article>
-        <img src={Partnership} alt="partnership" />
-        <section>
+        <img className='partnership-image' src={Partnership} alt="partnership" />
+        <section className="introduction-section">
             <h1>How is solar panel work?</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur voluptates maxime, enim laboriosam facere</p>
-            <ul>
+            <ul className='introduction-cards-list'>
                 {React.Children.toArray(IntroCardInfos.map(card => <IntroCard {...card}/>))}
             </ul>
         </section>
-    </article>;
+    </article>
 }
 
-export default Introduction;
+export default Introduction

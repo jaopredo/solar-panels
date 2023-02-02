@@ -1,16 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-// import { Container } from './styles';
+import "./Introduction.card.scss"
 
 function IntroCard({ image, msg }) {
-    return <li>
-        <figure>
-            <img src={image} alt="Imagem" />
-            <figcaption>
-                {msg}
-            </figcaption>
-        </figure>
-    </li>;
+    return <li className="introduction-card">
+        <img src={image} alt="Imagem" />
+        <p>{msg}</p>
+    </li>
 }
 
-export default IntroCard;
+export default IntroCard
