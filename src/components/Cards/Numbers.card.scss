@@ -1,0 +1,19 @@
+@use "../../scss/mixins.scss";
+@use "../../scss/colors.scss" as *;
+
+.number-card {
+    @include mixins.flex($dir: column, $g: 7px);
+    background-color: #F2F2F2;
+    padding: 40px;
+    width: 300px;
+
+    img {
+        width: 60px;
+    }
+}
+
+.number {
+    color: $default-orange;
+    font-weight: bolder;
+    font-size: 3.2em;
+}

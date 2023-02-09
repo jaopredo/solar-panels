@@ -1,11 +1,11 @@
 import React from 'react'
 
-// import { Container } from './styles';
+import "./Numbers.card.scss"
 
 function NumberCard({ image, num, text }) {
-    return <li>
+    return <li className="number-card">
         <img src={image} alt=""/>
-        <p>{num}</p>
+        <p className="number">{num}</p>
         <p>{text}</p>
     </li>
 }

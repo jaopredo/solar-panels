@@ -1,0 +1,11 @@
+@use "../../scss/mixins.scss";
+@use "../../scss/colors.scss" as *;
+
+#numbers-article {
+    margin-top: 650px;
+}
+
+#numbers-list {
+    @include mixins.flex($g: 10px);
+    list-style: none;
+}

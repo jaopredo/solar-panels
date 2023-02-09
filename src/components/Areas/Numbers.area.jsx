@@ -1,7 +1,9 @@
-import React from 'react';
+import React from 'react'
+
+import "./Numbers.area.scss"
 
 /* COMPONENTS */
-import NumberCard from '../Cards/Numbers.card';
+import NumberCard from '../Cards/Numbers.card'
 
 /* IMAGES */
 import EmployeesIcon from '../../images/icon.black.person.png'
@@ -16,9 +18,11 @@ function Numbers() {
         { image: ProjectsIcon, num: 297, text: 'PROJECTS' },
         { image: Co2Icon, num: 5282, text: 'MT CO2' },
     ]
-    return <article>
-        {React.Children.toArray(numberCardsList.map(card => <NumberCard {...card} />))}
+    return <article id="numbers-article">
+        <ul id="numbers-list">
+            {React.Children.toArray(numberCardsList.map(card => <NumberCard {...card} />))}
+        </ul>
     </article>
 }
 
-export default Numbers;
+export default Numbers
