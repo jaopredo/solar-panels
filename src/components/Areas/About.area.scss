@@ -60,18 +60,7 @@
         text-align: center;
     }
     button {
-        background-color: $default-orange;
-        color: white;
-        border: none;
         font-size: 1.3em;
-        padding: 25px;
-        width: 50%;
-        border-radius: 5px;
-
-        &:hover {
-            cursor: pointer;
-            background-color: #222222;
-        }
     }
 }
 
@@ -80,6 +69,7 @@
     @include mixins.flex();
     margin-top: 180px;
     background-color: $default-orange;
+    height: 300px;
 }
 
 #budget-article-container {

@@ -1,0 +1,69 @@
+@use "../../scss/mixins.scss";
+@use "../../scss/colors.scss" as *;
+
+#house-demonstration-container {
+    background-image: url("../../images/garage-solar-panel.jpg");
+    background-size: 100%;
+    height: 750px;
+    position: relative;
+}
+
+#house-demonstration-text-container {
+    background-color: white;
+    color: #D0D0D0;
+    position: absolute;
+
+    right: 40px;
+    top: 30px;
+
+    border-left: 13px solid $default-orange;
+
+    width: 550px;
+    height: 500px;
+    padding: 20px;
+
+    font-size: 13.3pt;
+    
+    ul {
+        @include mixins.flex($dir: column);
+        height: 100%;
+        gap: 70px;
+        list-style: none;
+    }
+    img {
+        width: 20px;
+    }
+}
+
+
+#green-house-article {
+    @include mixins.flex($ai: stretch);
+    width: 85%;
+    margin: 40px auto;
+
+    h1 {
+        text-align: left;
+        font-weight: lighter;
+        letter-spacing: 2px;
+    }
+    section, img {
+        @include mixins.flex($jc: flex-start, $ai: stretch, $dir: column);
+        width: 100%
+    }
+}
+
+#border-section {
+    border-left: 10px solid $default-orange;
+    font-size: 14pt;
+    line-height: 35px;
+    padding: 20px;
+
+    button {
+        @include mixins.flex();
+        font-size: .9em;
+        letter-spacing: 3px;
+        border-radius: 15px;
+        height: 60px;
+        margin-top: 40px;
+    }
+}

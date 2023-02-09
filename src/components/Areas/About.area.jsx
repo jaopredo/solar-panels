@@ -15,7 +15,7 @@ function About() {
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores totam odio minima hic. Sed voluptatem distinctio eligendi quod
                 </p>
-                <button><FiPhoneCall/>CALL NOW</button>
+                <button className='orange-button'><FiPhoneCall/>CALL NOW</button>
             </div>
             <img src={OldEngineer} alt="engenheiro velho" />
         </article>

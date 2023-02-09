@@ -2,14 +2,16 @@ import React from 'react'
 
 import WomanSeeking from '../../images/woman-seeking.jpg'
 
+import "./Plans.area.scss";
+
 function Plans() {
     return <>
-        <article>
+        <article id="plans-article">
             <h1>We Have a Solar Plan For Almost Any Budget</h1>
-            <ul>
+            <ul id="plans-list">
                 <li>
                     <h2>Monthly Plan</h2>
-                    <p>Sample Text. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <p className='plan-spec'>Sample Text. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti aspernatur itaque, est autem fugiat magnam facere adipisci obcaecati? Dolore iusto laborum nobis quia quos ipsum obcaecati debitis exercitationem facere eveniet?
                     </p>
@@ -17,7 +19,7 @@ function Plans() {
                 </li>
                 <li>
                     <h2>Full Amount Lease</h2>
-                    <p>Sample Text. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <p className="plan-spec">Sample Text. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti aspernatur itaque, est autem fugiat magnam facere adipisci obcaecati? Dolore iusto laborum nobis quia quos ipsum obcaecati debitis exercitationem facere eveniet?
                     </p>
@@ -25,7 +27,7 @@ function Plans() {
                 </li>
                 <li>
                     <h2>System Purchase</h2>
-                    <p>Sample Text. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <p className="plan-spec">Sample Text. Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti aspernatur itaque, est autem fugiat magnam facere adipisci obcaecati? Dolore iusto laborum nobis quia quos ipsum obcaecati debitis exercitationem facere eveniet?
                     </p>
@@ -33,13 +35,14 @@ function Plans() {
                 </li>
             </ul>
         </article>
-        <article>
-            <section>
-                <h1>CLEAN ENERGY</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque dolore quia possimus laudantium consequatur beatae nemo adipisci dolorem incidunt ipsam, sunt magnam voluptatibus unde consequuntur blanditiis ullam aperiam facere exercitationem.</p>
+        <article id="clean-energy-article">
+            <section id="clean-energy-section">
+                <h1>Clean Energy</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque dolore quia possimus laudantium consequatu</p>
                 <a href="#">LEARN MORE</a>
             </section>
-            <img src={WomanSeeking} alt="Woman Seeking" />
+            <img src={WomanSeeking} id="woman-seeking" alt="Woman Seeking" />
+            <span id="orange-block"></span>
         </article>
     </>
 }

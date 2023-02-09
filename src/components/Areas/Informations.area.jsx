@@ -1,32 +1,34 @@
-import React from 'react';
+import React from 'react'
+
+import "./Informations.area.scss"
 
 import GreenHouse from '../../images/green-house.jpg'
+import ItemBullet from '../../images/list-disc.png'
 
 function Informations() {
     return <>
-        <article>
-            {/* garage solar panel jpg */}
-            <section>
+        <article id="house-demonstration-container">
+            <section id="house-demonstration-text-container">
                 <ul>
                     <li>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae commodi vitae exercitationem cupiditate, earum tempora a modi illo dolorum temporibus nulla saepe voluptatibus nemo ab dicta in. Eveniet, iste.
+                        <img src={ItemBullet} alt="" /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae commodi vitae exercitationem cupiditate
                     </li>
                     <li>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas at officiis neque natus possimus sapiente corrupti, id, maiores exercitationem nobis quaerat molestiae delectus labore, eum quasi deleniti quae veritatis nostrum.
+                        <img src={ItemBullet} alt="" /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas at officiis neque natus possimus sapiente corrupti
                     </li>
                     <li>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, voluptatibus! Voluptate tenetur unde, asperiores, libero quia nemo quas est provident magnam cumque nulla vel at, omnis tempore eum natus totam.
+                        <img src={ItemBullet} alt="" /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, voluptatibus! Voluptate tenetur unde, asperiores
                     </li>
                 </ul>
             </section>
         </article>
-        <article>
+        <article id="green-house-article">
             <section>
-                <h1>Energy Freedom with Solar and Storage</h1>
+                <h1>Energy<br/>Freedom with<br/>Solar and<br/>Storage</h1>
             </section>
-            <section>
+            <section id="border-section">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo reprehenderit cupiditate animi, tempore eveniet, culpa ipsam itaque magni ex inventore accusamus dolores nobis voluptas quod, asperiores beatae id maiores porro!</p>
-                <button>LEARN MORE</button>
+                <button className='orange-button'>LEARN MORE</button>
             </section>
             <img src={GreenHouse} alt="Green House" />
         </article>
