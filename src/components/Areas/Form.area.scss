@@ -1,0 +1,61 @@
+@use "sass:color" as c;
+@use "../../scss/mixins.scss";
+@use "../../scss/colors.scss" as *;
+
+#form-article {
+    @include mixins.flex();
+    background-color: $default-orange;
+    color: white;
+    margin-top: 40px;
+    padding: 50px;
+}
+
+#form-container {
+    @include mixins.flex($g: 20px, $ai: stretch);
+    width: 80%;
+}
+
+#feedback-form {
+    @include mixins.flex($dir: column, $ai: stretch, $g: 10px);
+    width: 100%;
+    margin-left: 10px;
+
+    h1 {
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        margin-bottom: 30px;
+        margin-left: -10px;
+    }
+
+    input, textarea {
+        font-size: 1em;
+        padding: 10px;
+        background-color: $form-grey;
+        border: none;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 1.1em;
+        width: fit-content;
+        padding: 10px 20px;
+
+        &:hover {
+            background-color: c.adjust($color: $default-orange, $red: -20, $green: -20, $blue: -20);
+            cursor: pointer;
+        }
+    }
+}
+
+#sugestions-section {
+    width: 100%;
+    background-color: $form-grey;
+    padding: 30px;
+
+    dl {
+        @include mixins.flex($dir: column, $ai: stretch, $g: 20px);
+    }
+}
