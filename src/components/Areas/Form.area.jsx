@@ -7,9 +7,9 @@ import Sugestion from '../Cards/Sugestion.card'
 
 function Form() {
     const definitionList = [
-        { title: "Como sua opnião influencia?" },
-        { title: "Como sei que minha opnião foi vista?" },
-        { title: "Aonde minha opnião fica?" },
+        { title: "Como sua opinião influencia?" },
+        { title: "Como sei que minha opinião foi vista?" },
+        { title: "Aonde minha opinião fica?" },
     ]
     const { register, handleSubmit } = useForm()
 
