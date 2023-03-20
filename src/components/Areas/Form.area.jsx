@@ -14,10 +14,6 @@ function Form() {
     const { register, handleSubmit } = useForm()
 
     const onSubmit = data => console.log(data)
-
-    function changeOthersSugestionText(wich, state) {
-        console.log(wich)
-    }
     
     return <article id="form-article">
         <div id="form-container">
@@ -30,7 +26,7 @@ function Form() {
             </form>
             <section id="sugestions-section">
                 <dl>
-                    {React.Children.toArray(definitionList.map(definition => <Sugestion changeOthersSugestionsText={changeOthersSugestionText} {...definition}/>))}
+                    {React.Children.toArray(definitionList.map(definition => <Sugestion {...definition}/>))}
                 </dl>
             </section>
         </div>

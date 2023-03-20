@@ -6,13 +6,8 @@ import "./Sugestion.card.scss"
 function Sugestion({ title, changeOthersSugestionsText }) {
     const [ showDefinition, setShowDefinition ] = React.useState(false)
 
-    function onClick(e) {
-        setShowDefinition(!showDefinition)
-        changeOthersSugestionsText(e.target, false)
-    }
-
     return <>
-        <dt className="sugestion-card" onClick={onClick}>
+        <dt className="sugestion-card">
             {title}
             {!showDefinition && <GoTriangleRight/>}
             {showDefinition && <GoTriangleDown/>}
