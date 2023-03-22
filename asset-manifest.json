@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/solar-panels/static/css/main.5b5feca8.css",
+    "main.js": "/solar-panels/static/js/main.b3c1fb2a.js",
+    "static/media/young-engineer.jpg": "/solar-panels/static/media/young-engineer.80d74501b54baaaf1129.jpg",
+    "static/media/old-engineer.jpg": "/solar-panels/static/media/old-engineer.bc440e29f6ea80b2bae1.jpg",
+    "static/media/woman-seeking.jpg": "/solar-panels/static/media/woman-seeking.2301830076ce218c3924.jpg",
+    "static/media/partnership.jpg": "/solar-panels/static/media/partnership.e58e3785bb7d388ec8dc.jpg",
+    "static/media/garage-solar-panel.jpg": "/solar-panels/static/media/garage-solar-panel.53d0b0a58d3a1d0d6541.jpg",
+    "static/media/green-house.jpg": "/solar-panels/static/media/green-house.c2074abd293d20d94832.jpg",
+    "index.html": "/solar-panels/index.html",
+    "main.5b5feca8.css.map": "/solar-panels/static/css/main.5b5feca8.css.map",
+    "main.b3c1fb2a.js.map": "/solar-panels/static/js/main.b3c1fb2a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b5feca8.css",
+    "static/js/main.b3c1fb2a.js"
+  ]
+}
