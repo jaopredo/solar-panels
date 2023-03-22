@@ -2,13 +2,22 @@
 @use "../../scss/colors.scss" as *;
 
 #house-demonstration-container {
+    @include mixins.tablet {
+        background-size: auto 100%;
+        height: 140vh;
+        background-position-x: 34%;
+    }
     background-image: url("../../images/garage-solar-panel.jpg");
-    background-size: 100%;
-    height: 750px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 110vh;
     position: relative;
 }
 
 #house-demonstration-text-container {
+    @include mixins.tablet {
+        top: 60px;
+    }
     background-color: white;
     color: #D0D0D0;
     position: absolute;
@@ -37,6 +46,14 @@
 
 
 #green-house-article {
+    @include mixins.tablet {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "titlesec textsec"
+            "greenhouse greenhouse";
+    }
     @include mixins.flex($ai: stretch);
     width: 85%;
     margin: 40px auto;
@@ -50,9 +67,20 @@
         @include mixins.flex($jc: flex-start, $ai: stretch, $dir: column);
         width: 100%
     }
+
+    img {
+        @include mixins.tablet { grid-area: greenhouse; }
+    }
+}
+
+#green-house-article-text {
+    @include mixins.tablet { grid-area: titlesec; }
 }
 
 #border-section {
+    @include mixins.tablet {
+        grid-area: textsec;
+    }
     border-left: 10px solid $default-orange;
     font-size: 14pt;
     line-height: 35px;

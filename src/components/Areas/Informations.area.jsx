@@ -23,7 +23,7 @@ function Informations() {
             </section>
         </article>
         <article id="green-house-article">
-            <section>
+            <section id="green-house-article-text">
                 <h1>Energy<br/>Freedom with<br/>Solar and<br/>Storage</h1>
             </section>
             <section id="border-section">

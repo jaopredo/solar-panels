@@ -2,10 +2,14 @@
 @use "../../scss/colors.scss" as *;
 
 .introduction-card {
+    @include mixins.tablet {
+        width: 330px;
+    }
+
     @include mixins.flex();
 
     height: 170px;
-    width: 250px;
+    width: 220px;
 
     border: 5px solid $default-orange;
     position: relative;

@@ -3,9 +3,11 @@
 
 #numbers-article {
     margin-top: 650px;
+    padding: 20px;
 }
 
 #numbers-list {
     @include mixins.flex($g: 10px);
+    flex-wrap: wrap;
     list-style: none;
 }

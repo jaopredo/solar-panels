@@ -4,8 +4,8 @@ import "./About.area.scss"
 
 /* IMAGES */
 import { FiPhoneCall } from 'react-icons/fi'
-import OldEngineer from '../../images/old-engineer.jpg'
-import YoungEngineer from '../../images/young-engineer.jpg'
+// import OldEngineer from '../../images/old-engineer.jpg'
+// import YoungEngineer from '../../images/young-engineer.jpg'
 
 function About() {
     return <section id="about-section">
@@ -17,11 +17,13 @@ function About() {
                 </p>
                 <button className='orange-button'><FiPhoneCall/>CALL NOW</button>
             </div>
-            <img src={OldEngineer} alt="engenheiro velho" />
+            {/* <img src={OldEngineer} alt="engenheiro velho" /> */}
+            <div id="old-engineer-container"></div>
         </article>
         <article id="budget-article">
             <div id="budget-article-container">
-                <img src={YoungEngineer} alt='engenheiro jovem' />
+                {/* <img src={YoungEngineer} alt='engenheiro jovem' /> */}
+                <div id="young-engineer-container"></div>
                 <section id="budget-article-section-1">
                     <h2>We Have a Solar Plan<br/>for Almost Any<br/>Budget</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, blanditiis labore quasi</p>
@@ -35,4 +37,4 @@ function About() {
     </section>
 }
 
-export default About;
+export default About

@@ -81,19 +81,27 @@
 }
 
 #woman-seeking {
+    @include mixins.tablet {
+        right: 10%;
+    }
     display: block;
     position: absolute;
     z-index: 1;
 
-    width: 700px;
+    max-width: 700px;
+    width: 70vw;
 
     top: 80px;
     right: 150px;
 }
 
 #orange-block {
+    @include mixins.tablet {
+        right: 6%;
+    }
     display: block;
-    width: 600px;
+    max-width: 600px;
+    width: 60vw;
     height: 780px;
     position: absolute;
     background-color: $default-orange;

@@ -3,11 +3,11 @@ import { GoTriangleRight, GoTriangleDown } from 'react-icons/go'
 
 import "./Sugestion.card.scss"
 
-function Sugestion({ title, changeOthersSugestionsText }) {
+function Sugestion({ title }) {
     const [ showDefinition, setShowDefinition ] = React.useState(false)
 
     return <>
-        <dt className="sugestion-card">
+        <dt className="sugestion-card" onClick={() => setShowDefinition(!showDefinition)}>
             {title}
             {!showDefinition && <GoTriangleRight/>}
             {showDefinition && <GoTriangleDown/>}
