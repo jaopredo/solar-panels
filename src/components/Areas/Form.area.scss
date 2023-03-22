@@ -11,6 +11,9 @@
 }
 
 #form-container {
+    @include mixins.phone {
+        @include mixins.flex($dir: column)
+    }
     @include mixins.flex($g: 20px, $ai: stretch);
     width: 80%;
 }
@@ -19,6 +22,7 @@
     @include mixins.flex($dir: column, $ai: stretch, $g: 10px);
     width: 100%;
     margin-left: 10px;
+    margin-bottom: 20px;
 
     h1 {
         font-weight: bolder;
@@ -33,6 +37,9 @@
         padding: 10px;
         background-color: $form-grey;
         border: none;
+    }
+    textarea {
+        width: 100%;
     }
 
     button {

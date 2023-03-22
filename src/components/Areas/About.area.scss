@@ -2,6 +2,9 @@
 @use "../../scss/colors.scss" as *;
 
 
+$phone-article-items-width-phone: 400px;
+
+
 #about-section {
     @include mixins.flex($dir: column);
     background-color: #F2F2F2;
@@ -16,19 +19,28 @@
     }
 }
 
+
 #phone-article {
+    @include mixins.phone {
+        @include mixins.flex($dir: column);
+        gap: 20px;
+
+        height: 100vh;
+        padding: 600px 0;
+    }
     @include mixins.flex($ai: stretch);
     gap: 30px;
     width: 80%;
     height: 600px;
     position: relative;
 
-    img {
-        width: 100%;
-        z-index: 1;
-    }
-
     &::before {
+        @include mixins.phone {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 70%;
+        }
         content: "";
         display: block;
         border: 20px solid $default-orange;
@@ -42,6 +54,11 @@
 }
 
 #phone-article-container {
+    @include mixins.phone {
+        min-height: 500px;
+        width: $phone-article-items-width-phone;
+    }
+
     @include mixins.flex($dir: column);
     gap: 30px;
 
@@ -65,8 +82,30 @@
     }
 }
 
+#old-engineer-container {
+    @include mixins.phone {
+        min-height: 85vh;
+        width: $phone-article-items-width-phone;
+        background-size: $phone-article-items-width-phone auto;
+        // background-color: blue;
+    }
+    display: block;
+    background-image: url("../../images/young-engineer.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position-x: center;
+    width: 100%;
+    z-index: 2;
+
+    background-image: url("../../images/old-engineer.jpg");
+}
+
+
 
 #budget-article {
+    @include mixins.phone {
+        height: 800px;
+    }
     @include mixins.flex();
     margin-top: 180px;
     background-color: $default-orange;
@@ -81,6 +120,9 @@
         grid-template-areas:
             "img sec1"
             "sec2 sec2";
+    };
+    @include mixins.phone {
+        @include mixins.flex($dir: column);
     };
     @include mixins.flex($ai: stretch);
     width: 85%;
@@ -118,6 +160,9 @@
         // background-position-x: -110px;
         grid-area: img;
     }
+    @include mixins.phone {
+        min-height: 350px;
+    }
     display: block;
     background-image: url("../../images/young-engineer.jpg");
     background-repeat: no-repeat;
@@ -125,10 +170,4 @@
     background-position-x: center;
     width: 100%;
     z-index: 2;
-}
-
-#old-engineer-container {
-    @extend #young-engineer-container;
-
-    background-image: url("../../images/old-engineer.jpg");
 }

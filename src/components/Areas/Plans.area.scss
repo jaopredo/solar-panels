@@ -2,6 +2,9 @@
 @use "../../scss/colors.scss" as *;
 
 #plans-article {
+    @include mixins.phone {
+        padding: 20px;
+    }
     background-color: #E5E5E5;
     padding: 80px;
 
@@ -19,6 +22,9 @@
 }
 
 #plans-list {
+    @include mixins.phone {
+        flex-direction: column;
+    }
     @include mixins.flex($g: 30px);
     list-style: none;
 
@@ -41,12 +47,23 @@
 
 
 #clean-energy-article {
+    @include mixins.phone {
+        height: auto
+    }
     background-color: #E5E5E5;
     height: 500px;
     position: relative;
 }
 
 #clean-energy-section {
+    @include mixins.phone {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @include mixins.pocket {
+        position: static;
+        transform: none;
+    }
     @include mixins.flex($jc: center, $ai: stretch, $dir: column, $g: 40px);
 
     h1 { text-align: left; }
@@ -84,6 +101,15 @@
     @include mixins.tablet {
         right: 10%;
     }
+    @include mixins.phone {
+        left: 50%;
+        right: auto;
+        transform: translateX(-57.5%);
+        width: 425px;
+    }
+    @include mixins.pocket {
+        display: none;
+    }
     display: block;
     position: absolute;
     z-index: 1;
@@ -98,6 +124,13 @@
 #orange-block {
     @include mixins.tablet {
         right: 6%;
+    }
+    @include mixins.phone {
+        width: 400px;
+        right: 62px;
+    }
+    @include mixins.pocket {
+        display: none
     }
     display: block;
     max-width: 600px;

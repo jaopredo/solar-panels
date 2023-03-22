@@ -17,6 +17,12 @@
 #house-demonstration-text-container {
     @include mixins.tablet {
         top: 60px;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        min-height: 500px;
+        height: auto;
     }
     background-color: white;
     color: #D0D0D0;
@@ -54,6 +60,9 @@
             "titlesec textsec"
             "greenhouse greenhouse";
     }
+    @include mixins.phone {
+        @include mixins.flex($dir: column)
+    }
     @include mixins.flex($ai: stretch);
     width: 85%;
     margin: 40px auto;
@@ -70,18 +79,23 @@
 
     img {
         @include mixins.tablet { grid-area: greenhouse; }
+        @include mixins.phone { width: 60%; }
     }
 }
 
 #green-house-article-text {
     @include mixins.tablet { grid-area: titlesec; }
+    @include mixins.phone {
+        margin-left: 40px;
+    }
+    border-right: 10px solid $default-orange;
 }
 
 #border-section {
     @include mixins.tablet {
         grid-area: textsec;
     }
-    border-left: 10px solid $default-orange;
+    @include mixins.phone { text-align: justify; }
     font-size: 14pt;
     line-height: 35px;
     padding: 20px;
