@@ -48,7 +48,7 @@
 
 #clean-energy-article {
     @include mixins.phone {
-        height: auto
+        height: auto;
     }
     background-color: #E5E5E5;
     height: 500px;
@@ -57,12 +57,9 @@
 
 #clean-energy-section {
     @include mixins.phone {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    @include mixins.pocket {
-        position: static;
         transform: none;
+        width: 100%;
+        position: static;
     }
     @include mixins.flex($jc: center, $ai: stretch, $dir: column, $g: 40px);
 
@@ -102,12 +99,6 @@
         right: 10%;
     }
     @include mixins.phone {
-        left: 50%;
-        right: auto;
-        transform: translateX(-57.5%);
-        width: 425px;
-    }
-    @include mixins.pocket {
         display: none;
     }
     display: block;
@@ -126,11 +117,7 @@
         right: 6%;
     }
     @include mixins.phone {
-        width: 400px;
-        right: 62px;
-    }
-    @include mixins.pocket {
-        display: none
+        display: none;
     }
     display: block;
     max-width: 600px;

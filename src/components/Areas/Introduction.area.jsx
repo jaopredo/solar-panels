@@ -3,8 +3,6 @@ import React from 'react'
 import "./Introduction.area.scss"
 
 /* IMAGES */
-import Partnership from '../../images/partnership.jpg'
-
 import SolarPanel from '../../images/icon.orange.solar-panel.png'
 import FanPanel from '../../images/icon.orange.fan-panel.png'
 import Plants from '../../images/icon.orange.plants-icon.png'
@@ -22,7 +20,7 @@ function Introduction() {
     ]
 
     return <article>
-        <img className='partnership-image' src={Partnership} alt="partnership" />
+        <div className="partnership-image"></div>
         <section className="introduction-section">
             <h1>How is solar panel work?</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur voluptates maxime, enim laboriosam facere</p>

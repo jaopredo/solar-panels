@@ -2,7 +2,7 @@
 @use "../../scss/colors.scss" as *;
 
 #numbers-article {
-    @include mixins.pocket {
+    @include mixins.phone {
         margin-top: 0;
     }
     margin-top: 650px;
